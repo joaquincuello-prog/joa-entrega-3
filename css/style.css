@@ -1,0 +1,129 @@
+/*  body{
+    display:flex;
+    background-image: url(../assets/premium_photo-1661274122092-b9c89f8e9c70.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px; 
+   
+} */
+body{
+    margin: 0;
+    background-image: url(../assets/premium_photo-1661274122092-b9c89f8e9c70.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a{
+    /* decoracion del menu */
+  text-decoration: none;
+  color: #91dc66;
+
+}
+
+
+header{
+   display: flex;
+   min-height: 100px;
+   background-color: #ffffff;
+   justify-content: space-between;
+   align-items: center;
+   
+}
+
+header h2{
+    font-family: "Italianno", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 45px;
+}
+header h3{
+    color: black;
+    font-family: "Italianno", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+
+  
+}
+.logo img{
+    height: 110px;
+    width: 110px;
+    margin-right: 10px;
+    border-radius: 100px;
+    
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+
+nav a:hover{
+   color: rgb(255, 255, 255);
+}
+
+
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+}
+
+/* cuerpo */
+
+main {
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-family: "Italianno", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 40px;
+
+}
+main p{
+color:#208100;
+font-family: Baloo-bhaiana;
+margin-top: 0;
+font-size: 25px;
+text-align: justify;
+
+}
+/* .italianno-regular {
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+   */
+   footer{
+    background-color: black;
+    color: white ;
+   }
+   .contenedor{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+   }
+
+
+    
+
+/*    }
+   display: flex;
+   min-height: 100px;
+   background-color: #ffffff;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px; */

@@ -1,0 +1,33 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//img
+@mixin fondo-cubierto($url) {
+  background-image: url($url);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+//btn-estilo
+//contacto
+@mixin btn-estilo($bg-color, $text-color) {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: $bg-color;
+  color: $text-color;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+//nosotros
+@mixin seccion-basica {
+  max-width: 1200px;
+  margin: auto;
+  padding: $espaciado-secciones;
+}

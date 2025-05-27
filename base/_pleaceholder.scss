@@ -1,0 +1,14 @@
+%btn-base {
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+//contacto
+%boton-base {
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

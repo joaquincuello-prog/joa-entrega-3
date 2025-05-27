@@ -1,0 +1,58 @@
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 20px;
+  @include fondo-cubierto("../assets/encabezado.jpg");
+
+  .logo {
+    height: 110px;
+    width: 100px;
+    border-radius: 50%;
+    margin: .625rem;
+  }
+
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      margin: 0;
+      font-size: $titulo-font-size;
+    }
+
+    p {
+      margin: 0;
+      font-size: $parrafo-font-size;
+      color: $color-primario;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 15px;
+      margin: 0;
+      border-radius: .625rem;
+      background-color: $color-primario;
+
+      li {
+        a {
+          text-decoration: none;
+          color: #e9f8df;
+          font-weight: bold;
+          font-size: 18px;
+          font-family: $fuente-general;
+
+          &:hover {
+            color: $color-hover;
+          }
+        }
+      }
+    }
+  }
+}

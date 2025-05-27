@@ -1,0 +1,32 @@
+.resenas {
+  .testimonio {
+    border-radius: 8px;
+    position: relative;
+
+    blockquote {
+      font-style: italic;
+      margin: 10px;
+      color: $color-principal;
+    }
+
+    cite {
+      display: block;
+      font-weight: bold;
+      color: $color-primario;
+    }
+  }
+
+  .agendar-cita {
+    margin-top: 30px;
+
+    .btn-agendar {
+      @extend %boton-base;
+      background-color: $verde-boton-hover;
+      color: $color-principal;
+
+      &:hover {
+        background-color: $verde-boton;
+      }
+    }
+  }
+}

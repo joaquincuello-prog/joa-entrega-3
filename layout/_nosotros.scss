@@ -1,0 +1,100 @@
+.intro{
+    background-color: $color-sombra;
+}
+
+
+
+.intro {
+  @include seccion-basica;
+  text-align: center;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $color-texto;
+  }
+
+  p {
+    color: $color-secundario;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+.mision-vision {
+  @include seccion-basica;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+
+  .bloque {
+    flex: 1 1 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+
+
+    h2 {
+      color: $color-texto;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $color-secundario;
+    }
+  }
+}
+
+.equipo {
+  @include seccion-basica;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: $color-secundario;
+  }
+
+  .miembros-equipo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+
+    .miembro {
+      flex: 1 1 250px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+
+      h3 {
+        margin-bottom: 10px;
+        color: $color-texto;
+      }
+
+      p {
+        color: $color-secundario;
+      }
+    }
+  }
+
+  .agendar-cita {
+    margin-top: 30px;
+    text-align: center;
+
+    .btn-agendar {
+      @extend %boton-base;
+      @include btn-estilo($verde-boton, $color-texto-boton);
+
+      &:hover {
+        background-color: $verde-boton-hover;
+      }
+    }
+  }
+}

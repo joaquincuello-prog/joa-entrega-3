@@ -1,0 +1,47 @@
+.contacto {
+  max-width: 97%;
+  margin: auto;
+  padding: 40px 20px;
+
+  .formulario-contacto {
+    margin-bottom: 40px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input,
+    textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+  }
+
+  .info-contacto {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $verde-boton;
+    color: $color-hover;
+    border-radius: .625rem;
+
+        ul {
+            
+        list-style: none;
+        padding: 0;
+        
+
+        li {
+            margin-bottom: 10px;
+        }
+        }
+  }
+
+}

@@ -1,0 +1,19 @@
+.btn {
+  @extend %btn-base;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: $color-fondo-btn;
+  color: $color-texto-btn;
+}
+
+
+//contacto
+.btn-agendar, .btn-agendar2{
+    @extend %boton-base;
+    @include btn-estilo ($verde-boton, $color-texto-boton);
+    &:hover{
+        background-color: $verde-boton-hover;
+    }
+
+    
+}

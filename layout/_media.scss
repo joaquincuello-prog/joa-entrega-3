@@ -1,0 +1,94 @@
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+
+    .logo {
+      width: 90px;
+      height: 90px;
+    }
+
+    .titulo h1 { font-size: 22px; }
+    .titulo p { font-size: 14px; }
+
+    nav ul {
+      flex-direction: column;
+      padding: 10px;
+      gap: 10px;
+      background-color: #444;
+    }
+
+    nav a { font-size: 16px; }
+  }
+
+  .template-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 10px;
+
+    &-content {
+      h2 { font-size: 20px; }
+      p { font-size: 14px; }
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    text-align: center;
+
+    .logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .titulo h1 { font-size: 18px; }
+    .titulo p { font-size: 12px; }
+
+    nav ul {
+      flex-direction: column;
+      gap: 8px;
+      background-color: #444;
+      padding: 8px;
+    }
+
+    nav a { font-size: 14px; }
+  }
+
+  .template-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .hero-content {
+    h2 { font-size: 18px; }
+    p { font-size: 13px; }
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}

@@ -1,12 +1,24 @@
-.intro{
-    background-color: $color-sombra;
+// .intro{
+//     background-color: $color-sombra;
+// }
+.intro-contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
 }
 
 
-
 .intro {
-  @include seccion-basica;
+  background-color: $color-hover;
+  padding: 1.875rem;
+  border-radius: .75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 50rem;
+  margin-top: 2.5rem auto;
   text-align: center;
+
+
 
   h1 {
     font-size: 2rem;
@@ -89,11 +101,16 @@
     text-align: center;
 
     .btn-agendar {
-      @extend %boton-base;
-      @include btn-estilo($verde-boton, $color-texto-boton);
-
+       @extend %boton-base;
+      background-color: $verde-boton-hover;
+      color: $color-principal;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 6px;
+       transition: background-color 0.3s ease, transform 0.3s ease;
       &:hover {
-        background-color: $verde-boton-hover;
+        background-color: $verde-boton;
+        transform: scale(1.05);
       }
     }
   }

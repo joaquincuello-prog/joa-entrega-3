@@ -4,7 +4,8 @@
   text-decoration: none;
 }
 
-.resenass .agendar-cita .btn-agendar, .equipo .agendar-cita .btn-agendar, .btn-agendar, .btn-agendar2 {
+.resenass .agendar-cita .btn-agendar, .equipo .agendar-cita .btn-agendar, .contacto form button,
+.contacto form .btn-agendar, .btn-agendar, .btn-agendar2 {
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -228,15 +229,38 @@ main .hero-content {
 .contacto {
   max-width: 97%;
   margin: auto;
-  padding: 40px 20px;
+  padding: 3.75rem 1.25rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 .contacto .formulario-contacto {
   margin-bottom: 40px;
 }
+.contacto .formulario-contacto h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+.contacto .formulario-contacto p {
+  text-align: center;
+  font-size: 1.25rem;
+}
 .contacto form {
+  max-width: 31.25rem;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.25rem;
+  padding: 1.875rem;
+  background-color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+.contacto form label {
+  font-weight: 600;
+  color: #666;
 }
 .contacto form input,
 .contacto form textarea {
@@ -244,33 +268,73 @@ main .hero-content {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
-.contacto form label {
-  font-weight: bold;
+.contacto form inputfocus,
+.contacto form textareafocus {
+  border-color: #f4c2c2;
+  box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.3);
+  outline: none;
+}
+.contacto form textarea {
+  resize: vertical;
+  min-height: 7.5rem;
+}
+.contacto form button,
+.contacto form .btn-agendar {
+  align-self: flex-start;
+  background-color: #91dc66;
+  color: #000;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contacto form button:hover,
+.contacto form .btn-agendar:hover {
+  background-color: #78c854;
 }
 .contacto .info-contacto {
+  max-width: 31.25rem;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   background-color: #91dc66;
   color: #fff;
   border-radius: 0.625rem;
+  padding: 1.875rem;
+  gap: 0.9375rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 .contacto .info-contacto ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 .contacto .info-contacto ul li {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  font-size: 1rem;
+}
+
+.intro-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
 }
 
 .intro {
-  background-color: 0 4px 10px rgba(145, 220, 102, 0.3);
-}
-
-.intro {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
+  background-color: #fff;
+  padding: 1.875rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  max-width: 50rem;
+  margin-top: 2.5rem auto;
   text-align: center;
 }
 .intro h1 {
@@ -346,17 +410,16 @@ main .hero-content {
   text-align: center;
 }
 .equipo .agendar-cita .btn-agendar {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #91dc66;
+  background-color: #78c854;
   color: #000;
-  font-weight: bold;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .equipo .agendar-cita .btn-agendar:hover {
-  background-color: #78c854;
+  background-color: #91dc66;
+  transform: scale(1.05);
 }
 
 .resenass {
@@ -413,6 +476,9 @@ main .hero-content {
   color: #666;
 }
 .resenass .agendar-cita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 30px;
 }
 .resenass .agendar-cita .btn-agendar {

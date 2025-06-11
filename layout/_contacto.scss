@@ -1,47 +1,113 @@
 .contacto {
-  max-width: 97%;
+   max-width: 97%;
   margin: auto;
-  padding: 40px 20px;
+  padding: 3.75rem 1.25rem;
+  border-radius: .75rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 
   .formulario-contacto {
     margin-bottom: 40px;
+
+     h2 {
+      font-size: 28px;
+      text-align: center;
+      color: $color-hover;
+      margin-bottom: 30px;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1.25rem;
+    }
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 1.875rem;
+      background-color: $color-hover;
+      border-radius: .625rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 
-    input,
-    textarea {
-      padding: 10px;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
+      label {
+        font-weight: 600;
+        color: $color-primario;
+      }
 
-    label {
-      font-weight: bold;
-    }
-  }
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s, box-shadow 0.3s;
 
-  .info-contacto {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: $verde-boton;
-    color: $color-hover;
-    border-radius: .625rem;
-
-        ul {
-            
-        list-style: none;
-        padding: 0;
-        
-
-        li {
-            margin-bottom: 10px;
+          &focus {
+          border-color: $rosa-boton;
+          box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.3);
+          outline: none;
         }
-        }
-  }
 
+      }
+
+      
+      textarea{
+        resize: vertical;
+        min-height: 7.5rem;
+      }
+
+      button,
+      .btn-agendar {
+        @extend %boton-base;
+        align-self: flex-start;
+        background-color: $verde-boton;
+        color: $color-principal;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $verde-boton-hover;
+        } 
+      }
 }
+ 
+
+    .info-contacto {
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $verde-boton;
+      color: $color-hover;
+      border-radius: .625rem;
+      padding: 1.875rem;
+      gap: .9375rem;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+
+
+          ul {
+              
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          
+
+          li {
+              margin-bottom: .625rem;
+              font-size: 1rem;
+          }
+        }
+    }
+  }
+  

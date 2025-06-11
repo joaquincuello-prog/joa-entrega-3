@@ -1,14 +1,32 @@
 .servicios {
-  background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 10px;
 
   .serv-h2 {
     font-size: 30px;
     color: $color-hover;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .servicios-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+
   }
 
   .servicio {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.25rem;
+    border-radius: .625rem;
+    //box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
     h3 {
       margin-top: 15px;
       font-size: 24px;

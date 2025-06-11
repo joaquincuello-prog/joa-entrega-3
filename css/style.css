@@ -4,7 +4,7 @@
   text-decoration: none;
 }
 
-.resenas .agendar-cita .btn-agendar, .equipo .agendar-cita .btn-agendar, .btn-agendar, .btn-agendar2 {
+.resenass .agendar-cita .btn-agendar, .equipo .agendar-cita .btn-agendar, .btn-agendar, .btn-agendar2 {
   border: none;
   border-radius: 8px;
   font-weight: bold;
@@ -359,39 +359,98 @@ main .hero-content {
   background-color: #78c854;
 }
 
-.resenas .testimonio {
-  border-radius: 8px;
+.resenass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.resenass .testimonio {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.resenass .testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.resenass .testimonio blockquote {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #000;
   position: relative;
 }
-.resenas .testimonio blockquote {
-  font-style: italic;
-  margin: 10px;
-  color: #000;
+.resenass .testimonio blockquote::before, .resenass .testimonio blockquote::after {
+  content: '"';
+  font-size: 40px;
+  color: #f4c2c2;
+  position: absolute;
+  opacity: 0.2;
 }
-.resenas .testimonio cite {
+.resenass .testimonio blockquote::before {
+  top: -10px;
+  left: -20px;
+}
+.resenass .testimonio blockquote::after {
+  bottom: -10px;
+  right: -20px;
+}
+.resenass .testimonio cite {
   display: block;
+  margin-top: 10px;
   font-weight: bold;
+  font-size: 16px;
   color: #666;
 }
-.resenas .agendar-cita {
+.resenass .agendar-cita {
   margin-top: 30px;
 }
-.resenas .agendar-cita .btn-agendar {
+.resenass .agendar-cita .btn-agendar {
   background-color: #78c854;
   color: #000;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.resenas .agendar-cita .btn-agendar:hover {
+.resenass .agendar-cita .btn-agendar:hover {
   background-color: #91dc66;
+  transform: scale(1.05);
 }
 
 .servicios {
-  background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 10px;
 }
 .servicios .serv-h2 {
   font-size: 30px;
   color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.servicios .servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.servicios .servicio {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .servicios .servicio h3 {
   margin-top: 15px;

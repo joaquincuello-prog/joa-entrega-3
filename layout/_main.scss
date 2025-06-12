@@ -1,24 +1,66 @@
 main {
-  @include fondo-cubierto("../assets/fondo-pantalla.jpg");
+  //@include fondo-cubierto("../assets/fondo-pantalla.jpg");
+  background-color: rgba(0, 0, 0, 0.81);
   width: 100%;
   min-height: 500px;
-  height: 100vh;
+  height: auto;
 
-  .template-columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .hero {
-    @include flex-center;
-    text-align: center;
-    color: $color-hover;
-    padding: 20px;
+      .imagenes{
+        display: flex;
+        justify-content: center;
+        width: 56.25rem;
+        height: 26.875rem;
+        margin: auto;
 
-    &-content {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 30px;
-      border-radius: 10px;
+        .seguidilla{
+          display: flex;
+          width: 100%;
+          height: 100%;
+
+          img {
+          width: 0rem;
+          flex-grow: 1;
+          object-fit: cover;
+          opacity: 0.8;
+          transition: 0.5s ease;
+
+          &:hover {
+            cursor: crosshair;
+            width: 18.75rem;
+            opacity: 1;
+            filter: contrast(120%);
+          }
+        }    
+      }
     }
-  }
+  
+    .template-columns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+      @include flex-center;
+      text-align: center;
+      color: $color-hover;
+      padding: 20px;
+
+      &-content {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 30px;
+        border-radius: 10px;
+
+        width: 25rem;
+        height: 12.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
 }
+
+
+  

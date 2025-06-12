@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
 }
-//img
+//img de encabezado
 @mixin fondo-cubierto($url) {
   background-image: url($url);
   background-position: center;

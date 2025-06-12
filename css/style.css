@@ -14,20 +14,34 @@
 }
 
 .navbar {
+  background-image: url("../assets/encabezado.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
   padding: 10px 20px;
   gap: 20px;
-  background-image: url("../assets/encabezado.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: -1;
 }
 .navbar .logo {
   height: 110px;
   width: 100px;
   border-radius: 50%;
+  border-color: black;
   margin: 0.625rem;
 }
 .navbar .titulo {
@@ -37,12 +51,17 @@
 }
 .navbar .titulo h1 {
   margin: 0;
-  font-size: 24px;
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.8125rem;
 }
 .navbar .titulo p {
   margin: 0;
-  font-size: 14px;
-  color: #666;
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.875rem;
 }
 .navbar nav ul {
   list-style: none;
@@ -65,13 +84,35 @@
 }
 
 main {
-  background-image: url("../assets/fondo-pantalla.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.81);
   width: 100%;
   min-height: 500px;
-  height: 100vh;
+  height: auto;
+}
+main .imagenes {
+  display: flex;
+  justify-content: center;
+  width: 56.25rem;
+  height: 26.875rem;
+  margin: auto;
+}
+main .imagenes .seguidilla {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+main .imagenes .seguidilla img {
+  width: 0rem;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+}
+main .imagenes .seguidilla img:hover {
+  cursor: crosshair;
+  width: 18.75rem;
+  opacity: 1;
+  filter: contrast(120%);
 }
 main .template-columns {
   display: grid;
@@ -89,6 +130,11 @@ main .hero-content {
   background: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 10px;
+  width: 25rem;
+  height: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btn {
@@ -428,7 +474,10 @@ main .hero-content {
   align-items: center;
   height: 100vh;
   padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.05);
+}
+.resenass h2 {
+  text-align: center;
+  color: white;
 }
 .resenass .testimonio {
   background-color: white;

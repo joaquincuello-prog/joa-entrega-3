@@ -1,94 +1,654 @@
+//PANTALLA DE TABLET
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 10px;
+  .imagenes {
+    width: 100%;
+    height: 20rem;
 
-    .logo {
-      width: 90px;
-      height: 90px;
+    .seguidilla {
+      img {
+        &:hover {
+          width: 12rem;
+        }
+      }
     }
-
-    .titulo h1 { font-size: 22px; }
-    .titulo p { font-size: 14px; }
-
-    nav ul {
-      flex-direction: column;
-      padding: 10px;
-      gap: 10px;
-      background-color: #444;
-    }
-
-    nav a { font-size: 16px; }
   }
 
   .template-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 15px;
+
+    &-content {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+    }
+  }
+}
+
+//PANTALLA TELEFONO
+@media (max-width: 350px) {
+  .imagenes {
+    flex-direction: column;
+    height: auto;
+
+    .seguidilla {
+      flex-direction: column;
+
+      img {
+        width: 100% !important;
+        opacity: 1;
+
+        &:hover {
+          width: 100% !important;
+          cursor: default;
+          filter: none;
+        }
+      }
+    }
+  }
+
+  .template-columns {
+    grid-template-columns: 1fr;
   }
 
   .hero {
     padding: 10px;
 
     &-content {
-      h2 { font-size: 20px; }
-      p { font-size: 14px; }
+      width: 100%;
+      height: auto;
+      padding: 15px;
+    }
+  }
+}
+
+
+//media de contacto
+//PANTALLA DE TABLET
+  @media (max-width: 768px) {
+  .contacto {
+    max-width: 97%;
+    margin: auto;
+    padding: 3.75rem 1.25rem;
+    border-radius: .75rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+    .formulario-contacto {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 28px;
+        text-align: center;
+        color: $color-hover;
+        margin-bottom: 30px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.25rem;
+      }
+    }
+
+    form {
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 1.875rem;
+      background-color: $color-hover;
+      border-radius: .625rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+      label {
+        font-weight: 600;
+        color: $color-primario;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &focus {
+          border-color: $rosa-boton;
+          box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.3);
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 7.5rem;
+      }
+
+      button,
+      .btn-agendar {
+        //@extend %boton-base;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: flex-start;
+        background-color: $verde-boton;
+        color: $color-principal;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $verde-boton-hover;
+        }
+      }
+    }
+
+    .info-contacto {
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $verde-boton;
+      color: $color-hover;
+      border-radius: .625rem;
+      padding: 1.875rem;
+      gap: .9375rem;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: .625rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+//PANTALLA DE CELULAR
+@media (max-width: 350px) {
+  .contacto {
+    max-width: 97%;
+    margin: auto;
+    padding: 3.75rem 1.25rem;
+    border-radius: .75rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+    .formulario-contacto {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 28px;
+        text-align: center;
+        color: $color-hover;
+        margin-bottom: 30px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.25rem;
+      }
+    }
+
+    form {
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 1.875rem;
+      background-color: $color-hover;
+      border-radius: .625rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+
+      label {
+        font-weight: 600;
+        color: $color-primario;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &focus {
+          border-color: $rosa-boton;
+          box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.3);
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 7.5rem;
+      }
+
+      button,
+      .btn-agendar {
+        //@extend %boton-base;
+         border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: flex-start;
+        background-color: $verde-boton;
+        color: $color-principal;
+        padding: 10px 25px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: $verde-boton-hover;
+        }
+      }
+    }
+
+    .info-contacto {
+      max-width: 31.25rem;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: $verde-boton;
+      color: $color-hover;
+      border-radius: .625rem;
+      padding: 1.875rem;
+      gap: .9375rem;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: .625rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+
+//media de nosotros
+//PANTALLA TABLET
+@media (max-width: 768px) {
+  .intro {
+    padding: 1.5rem;
+    max-width: 90%;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1rem;
     }
   }
 
-  .btn {
-    font-size: 14px;
-    padding: 8px 12px;
+  .mision-vision {
+    flex-direction: column;
+    gap: 15px;
+
+    .bloque {
+      padding: 15px;
+    }
+  }
+
+  .equipo {
+    .miembros-equipo {
+      flex-direction: column;
+      align-items: center;
+
+      .miembro {
+        max-width: 90%;
+      }
+    }
+
+    .agendar-cita {
+      .btn-agendar {
+        padding: 10px 24px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//PANTALLA DE TELEFONO
+@media (max-width: 350px) {
+  .intro {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .mision-vision {
+    gap: 10px;
+
+    .bloque {
+      padding: 12px;
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .equipo {
+    .miembros-equipo {
+      gap: 15px;
+
+      .miembro {
+        padding: 15px;
+      }
+    }
+
+    .agendar-cita {
+      .btn-agendar {
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+//servicio
+//PANTALLA TABLET
+@media (max-width: 768px) {
+  .servicios {
+    padding: 20px;
+
+    .serv-h2 {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .servicios-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .servicio {
+      padding: 1rem;
+
+      h3 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .btn-serv {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
+    }
   }
 }
 
 @media (max-width: 350px) {
-  body {
-    padding: 0 10px;
-    overflow-x: hidden;
-  }
+  .servicios {
+    padding: 15px;
 
-  .navbar {
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-    text-align: center;
-
-    .logo {
-      width: 70px;
-      height: 70px;
+    .serv-h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
     }
 
-    .titulo h1 { font-size: 18px; }
-    .titulo p { font-size: 12px; }
-
-    nav ul {
-      flex-direction: column;
-      gap: 8px;
-      background-color: #444;
-      padding: 8px;
+    .servicios-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
     }
 
-    nav a { font-size: 14px; }
-  }
+    .servicio {
+      padding: 0.875rem;
 
-  .template-columns {
+      h3 {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .btn-serv {
+        padding: 8px 16px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+
+
+//reseña
+//PANTALLA TABLET
+@media (max-width: 768px) {
+  .resenass {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 0;
-  }
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
 
-  .hero-content {
-    h2 { font-size: 18px; }
-    p { font-size: 13px; }
-  }
+    h2 {
+      text-align: center;
+      color: white;
+    }
 
-  .btn {
-    font-size: 13px;
-    padding: 6px 10px;
+    .testimonio {
+      background-color: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      blockquote {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: $color-principal;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '"';
+          font-size: 40px;
+          color: $rosa-boton;
+          position: absolute;
+          opacity: 0.2;
+        }
+
+        &::before {
+          top: -10px;
+          left: -20px;
+        }
+
+        &::after {
+          bottom: -10px;
+          right: -20px;
+        }
+      }
+
+      cite {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        color: $color-primario;
+      }
+    }
+
+    .agendar-cita {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+
+      .btn-agendar {
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: $verde-boton-hover;
+        color: $color-principal;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: $verde-boton;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+//PANTALLA TELEFONO
+@media (max-width: 350px) {
+  .resenass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 30px 15px;
+
+    h2 {
+      text-align: center;
+      color: white;
+    }
+
+    .testimonio {
+      background-color: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 15px;
+      max-width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      blockquote {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        color: $color-principal;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '"';
+          font-size: 32px;
+          color: $rosa-boton;
+          position: absolute;
+          opacity: 0.2;
+        }
+
+        &::before {
+          top: -8px;
+          left: -15px;
+        }
+
+        &::after {
+          bottom: -8px;
+          right: -15px;
+        }
+      }
+
+      cite {
+        display: block;
+        margin-top: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $color-primario;
+      }
+    }
+
+    .agendar-cita {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+
+      .btn-agendar {
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        background-color: $verde-boton-hover;
+        color: $color-principal;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background-color: $verde-boton;
+          transform: scale(1.05);
+        }
+      }
+    }
   }
 }

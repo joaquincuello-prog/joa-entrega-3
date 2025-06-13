@@ -1,4 +1,71 @@
+//HEADER
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 10px;
+
+    .logo {
+      height: 90px;
+      width: 80px;
+      margin: auto;
+    }
+
+    .titulo {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  }
+}
+
+//telefono
+@media (max-width: 350px) {
+  .navbar {
+    padding: 5px;
+
+    .logo {
+      height: 70px;
+      width: 60px;
+    }
+
+    .titulo {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 8px;
+      padding: 8px;
+
+      li a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+
+
 //PANTALLA DE TABLET
+//main
 @media (max-width: 768px) {
   .imagenes {
     width: 100%;
